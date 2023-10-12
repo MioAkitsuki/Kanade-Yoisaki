@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Metas -->
+      <meta charset="utf-8">
+      <title>Yoisaki Kanade</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/x-icon" href="icon.png" />
+      <!-- Css -->
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/base.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/flexslider.css" rel="stylesheet" type="text/css"  media="all" />
+      <link href="css/magnific-popup.css" rel="stylesheet" type="text/css"  media="all" />
+      <link href="css/fonts.css" rel="stylesheet" type="text/css"  media="all" />
+      <link href="https://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,400i,600,700,800" rel="stylesheet">
+   </head>
+   <body>
+      <!-- Preloader -->
+      <div class="loader">
+         <!-- Preloader inner -->
+         <div class="loader-inner">
+            <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <circle class="spinner" cx="50" cy="50" r="21" fill="#13181d" stroke-width="2"/>
+            </svg>
+         </div>
+         <!-- End preloader inner -->
+      </div>
+      <!-- End preloader-->
+      <!--Wrapper-->
+      <div class="wrapper">
+         <!--Hero section-->
+         <section class="hero">
+            <!--Main slider-->
+            <div class="main-slider slider flexslider">
+               <ul class="slides">
+                  <li>
+                     <div class="background-img overlay zoom">
+                        <img src="img/cards/Tomoru_ketsui_Before.webp" alt="">
+                     </div>
+                     <!--Container-->
+                        <!--Row-->
+                        <div class="row">
+                           <div class="col-sm-12 text-center">
+                              <!--Inner hero-->
+                              <div class="container-fluid hero-content">
+                                <div class="inner-hero rotate" id="rotator">
+                                  <div class="tachie"></div>
+                                  <div class="tachie-kage"></div>
+                                  <div class="row intro-card">
+                                    <div class="col-lg-3 visible-lg-block">
+                                    </div>
+                                    <div class="col-lg-9">
+                                      <div class="card bg-red z-50 shadow">
+                                        <div class="card-body intro-card-body">
+                                          <h1 class="large text-white uppercase mb-0">Yoisaki Kanade</h1>
+                                          <h5 class="text-white uppercase mb-0">CV. Kusunoki Tomori</h5>
+                                          <hr />
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Gender: Female</h5></div>
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Birthday: February 10th</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Height: 154cm</h5></div>
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">School: Online High School (Third Year)</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Hobby: Listening and searching for music, watching anime and movies, reading manga, looking at artwork</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Specialty: Keeping track of time just through intuition</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Favorite Food: Cup noodles, canned food</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Disliked Food: Food that smells weird (like coriander and natto)</h5></div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><h5 class="text-white" style="text-align: left;">Weakness: Direct sunlight, housework</h5></div>
+                                          </div>
+                                          <hr />
+                                          <div class="row">
+                                            <div class="col">
+                                              <blockquote>
+                                                Kanade was traumatized when her music inadvertently led someone very dear to her into depression. This unfortunate event resulted in her focusing on creating songs which inspired hope, and she created Nightcord at 25:00 specifically with this goal in mind. She composes songs for the group.
+                                                <figcaption class="blockquote-footer">
+                                                  Profile
+                                                </figcaption>
+                                              </blockquote>
+                                              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <i class="light"></i>
+                                </div>
+                           </div>
+                           <!--End row-->
+                        </div>
+                        <!--End container-->
+                     </div>
+                     <!--End inner hero-->
+                  </li>
+               </ul>
+            </div>
+            <!--End main slider-->
+         </section>
+         <!--End hero section-->
+      </div>
+      <!-- End wrapper-->
+      <!--Javascript--> 
+      <script>
+        const multiple = 50;
+        const mouseOverContainer = document.getElementsByTagName("body")[0];
+        const element = document.getElementById("rotator");
+
+        function transformElement(x, y) {
+          let box = element.getBoundingClientRect();
+          let calcX = -(y - box.y - (box.height / 2)) / multiple;
+          let calcY = (x - box.x - (box.width / 2)) / multiple;
+          
+          element.style.transform  = "rotateX("+ calcX +"deg) "
+                                + "rotateY("+ calcY +"deg)";
+        }
+
+        mouseOverContainer.addEventListener('mousemove', (e) => {
+          window.requestAnimationFrame(function(){
+            transformElement(e.clientX, e.clientY);
+          });
+        });
+
+        mouseOverContainer.addEventListener('mouseleave', (e) => {
+          window.requestAnimationFrame(function(){
+            element.style.transform = "rotateX(0) rotateY(0)";
+          });
+        });
+      </script>
+      <script src="js/jquery-1.12.4.min.js"></script>
+      <script src="js/jquery.flexslider-min.js"></script>
+      <script src="js/smooth-scroll.js" ></script>
+      <script src="js/jquery.magnific-popup.min.js" ></script>
+      <script src="js/audio.min.js" ></script>
+      <script src="js/twitterFetcher_min.js" ></script>
+      <script src="js/jquery.countdown.min.js" ></script>
+      <script src="js/placeholders.min.js"></script>
+      <script src="js/script.js"></script>
+      <!-- Google analytics -->
+      <!-- End google analytics -->
+   </body>
+</html>
+
