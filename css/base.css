@@ -420,10 +420,10 @@ img.animated{
 }
 
 
-img:hover{
+/* img:hover{
 -webkit-transform: translateX(0);
 transform: translateX(0);
-}
+} */
 
 
 .sing {
